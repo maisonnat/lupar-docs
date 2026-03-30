@@ -38,18 +38,7 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    Component.Explorer({
-      folderClickBehavior: "collapse",
-      folderDefaultState: "collapsed",
-      useSavedState: true,
-      mapFn: undefined,
-      sortFn: undefined,
-      filterFn: (node) => {
-        // hide drafts folder from explorer
-        return node.name !== "drafts"
-      },
-      order: ["Getting Started", "Features", "Regulaciones", "Guias", "Seguridad", "FAQ", "Glosario"],
-    }),
+    Component.Explorer(),
   ],
   right: [
     Component.Graph(),
@@ -73,11 +62,7 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer({
-      folderClickBehavior: "collapse",
-      folderDefaultState: "collapsed",
-      useSavedState: true,
-    }),
+    Component.Explorer(),
   ],
   right: [],
 }
